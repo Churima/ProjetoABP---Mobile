@@ -14,19 +14,24 @@ const SearchScreen = () => {
   return (
     <View style={styles.container}>
       <Title style={styles.title}>Pesquisar</Title>
-      <TextInput
-        label="Onde mora?"
-        value={place_origin}
-        onChangeText={text => set_place_origin(text)}
-        style={styles.input}
-      />
-      <TextInput
-        label="Onde quer ir?"
-        value={place_destiny}
-        onChangeText={text => set_place_destiny(text)}
-        style={styles.input}
-      />
-      <Button mode="contained" onPress={handleSearch} style={styles.button}>
+
+      <View style={styles.inputContainer}>
+        <TextInput
+          mode="outlined"
+          label="Onde mora"
+          value={place_origin}
+          onChangeText={text => set_place_origin(text)}
+          style={styles.input}
+        />
+        <TextInput
+          mode="outlined"
+          label="Onde quer ir?"
+          value={place_destiny}
+          onChangeText={text => set_place_destiny(text)}
+          style={styles.input}
+        />
+      </View>
+      <Button mode="contained" labelStyle={{ color: 'white' }}  onPress={handleSearch} style={styles.button}>
         Pesquisar
       </Button>
     </View>
@@ -36,18 +41,30 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    padding: 16,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   title: {
-    marginBottom: 16,
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+    backgroundColor: '#003366',
+    width: '100%',
     textAlign: 'center',
+    padding: 15,
+  },
+  inputContainer: {
+    width: '80%',
+    marginTop: 20,
   },
   input: {
-    marginBottom: 16,
+    marginBottom: 10,
   },
   button: {
-    marginTop: 16,
+    width: '80%',
+    marginTop: 20,
+    backgroundColor: '#003366',
   },
 });
 

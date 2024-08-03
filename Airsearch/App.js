@@ -15,7 +15,7 @@ const App = () => {
     <SafeAreaProvider>
       <PaperProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Search" screenOptions={{ headerShown: false }}>
+          <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Cadastro" component={Cadastro} />
             <Stack.Screen name="Search" component={Search} />

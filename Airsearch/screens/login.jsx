@@ -7,8 +7,7 @@ const Login = ({ navigation }) => {
   const [senha, setSenha] = useState('');
 
   const handleLogin = () => {
-    // Lógica de autenticação
-    // Navegue para a tela principal após o login
+    navigation.navigate('Search');
   };
 
   return (
@@ -33,7 +32,7 @@ const Login = ({ navigation }) => {
         />
       </View>
 
-      <Button mode="contained" onPress={handleLogin} style={styles.button}>
+      <Button labelStyle={{ color: 'white' }} mode="contained" onPress={handleLogin} style={styles.button}>
         CONECTAR
       </Button>
 
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   header: {
     fontSize: 24,
@@ -70,6 +69,7 @@ const styles = StyleSheet.create({
   button: {
     width: '80%',
     marginTop: 20,
+    backgroundColor: '#003366',
   },
   link: {
     marginTop: 20,

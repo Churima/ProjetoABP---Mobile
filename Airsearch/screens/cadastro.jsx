@@ -8,8 +8,6 @@ const Cadastro = ({ navigation }) => {
   const [senha, setSenha] = useState('');
 
   const handleCadastro = () => {
-    // Lógica de cadastro
-    // Navegue de volta para a tela de login após o cadastro
     navigation.navigate('Login');
   };
 
@@ -42,7 +40,7 @@ const Cadastro = ({ navigation }) => {
         />
       </View>
 
-      <Button mode="contained" onPress={handleCadastro} style={styles.button}>
+      <Button mode="contained" labelStyle={{ color: 'white' }} onPress={handleCadastro} style={styles.button}>
         CADASTRAR
       </Button>
     </View>
@@ -75,7 +73,8 @@ const styles = StyleSheet.create({
   button: {
     width: '80%',
     marginTop: 20,
-  },
+    backgroundColor: '#003366',
+  }
 });
 
 export default Cadastro;
